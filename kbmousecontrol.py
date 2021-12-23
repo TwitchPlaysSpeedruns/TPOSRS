@@ -17,6 +17,9 @@ KEYDOWN_ARG = "keydown"
 KEYUP_ARG = "keyup"
 DELAY_ARG = "delay"
 
+INPUT_CHAIN_MAX = 3 # how many commands can be run at a time from a single line of text
+DELAY_TIME_MAX = 2 # how long you can delay before another command
+
 # Change these values to the region of the window
 xMin = 100
 xMax = 850
@@ -52,7 +55,7 @@ def type_msg(*args):
     pass
 
 def double_click(*args):
-    m.double_click(str(args[0]))
+    pyautogui.click(button=args[0], clicks=2, interval=0.1)
     pass
 
 def rightclick():
@@ -109,7 +112,12 @@ def movemouserel(*args):
     pass
 
 def execution_delay(*args):
-    time.sleep(float(args[0]))
+    delayTime = float(args[0])
+    if(delayTime <= DELAY_TIME_MAX):
+        time.sleep(delayTime)
+    else:
+        print("Delay length invalid - Maximum delay length is " + str(DELAY_TIME_MAX), file=sys.stderr)
+    pass
 
 def getpos(*args):
     print(str(pyautogui.position()), file=sys.stderr)
@@ -228,7 +236,7 @@ def main():
     joined_args = " ".join(str(e) for e in input_args[1:])
     ## split into commands on ", "
     cmds = joined_args.split(", ")
-
+    cmds = cmds[0:INPUT_CHAIN_MAX]
     ##get a list of available commands
     availableCmds = ""
     for funcName in FuncMap:
