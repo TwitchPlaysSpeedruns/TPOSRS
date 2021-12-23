@@ -20,15 +20,6 @@ DELAY_ARG = "delay"
 INPUT_CHAIN_MAX = 3 # how many commands can be run at a time from a single line of text
 DELAY_TIME_MAX = 2 # how long you can delay before another command
 
-# Change these values to the region of the window
-xMin = 100
-xMax = 850
-yMin = 100
-yMax = 600
-
-# This is some buffer room for the mouse
-padding = 10
-
 def key_down(*args):
     pyautogui.keyDown(str(args[0]))
     pass
@@ -121,24 +112,6 @@ def execution_delay(*args):
 
 def getpos(*args):
     print(str(pyautogui.position()), file=sys.stderr)
-
-def clampmouse():
-    pos = pyautogui.position()
-        
-    curX = pos[0]
-    curY = pos[1]
-
-    if curX < xMin:
-        pyautogui.moveTo(xMin + padding, curY)        
-    elif curX > xMax:
-        pyautogui.moveTo(xMax - padding, curY)
-
-    curX = pyautogui.position()[0]
-
-    if curY < yMin:
-        pyautogui.moveTo(curX, yMin + padding)
-    elif curY > yMax:
-        pyautogui.moveTo(curX, yMax - padding)
 
 def isPointInBox(box, point):
     left = box[0]
