@@ -16,6 +16,9 @@ PASTE_ARG = "paste"
 KEYDOWN_ARG = "keydown"
 KEYUP_ARG = "keyup"
 DELAY_ARG = "delay"
+SHIFT_LEFTCLICK_ARG = "slc"
+SHIFT_RIGHTCLICK_ARG = "src"
+
 
 INPUT_CHAIN_MAX = 3 # how many commands can be run at a time from a single line of text
 DELAY_TIME_MAX = 2 # how long you can delay before another command
@@ -56,6 +59,17 @@ def rightclick():
 def leftclick():
     pyautogui.click()
     pass
+
+def shift_left_click():
+    pyautogui.keyDown('shift')
+    pyautogui.click()
+    pyautogui.keyUp('shift')
+    pass
+
+def shift_right_click():
+    pyautogui.keyDown('shift')
+    pyautogui.click(button='right')
+    pyautogui.keyUp('shift')
 
 def dragmouse(*args):
     newMouseLocation = (int(args[0]), int(args[1]))
@@ -156,7 +170,9 @@ FuncMap = {
     PASTE_ARG: paste_msg,
     KEYDOWN_ARG: key_down,
     KEYUP_ARG: key_up,
-    DELAY_ARG: execution_delay 
+    DELAY_ARG: execution_delay,
+    SHIFT_LEFTCLICK_ARG: shift_left_click,
+    SHIFT_RIGHTCLICK_ARG: shift_right_click
 }
 
 # Map argument count to function
@@ -174,7 +190,9 @@ ArgCountMap = {
     PASTE_ARG: 0,
     KEYDOWN_ARG: 1,
     KEYUP_ARG: 1,
-    DELAY_ARG: 1
+    DELAY_ARG: 1,
+    SHIFT_LEFTCLICK_ARG: 0,
+    SHIFT_RIGHTCLICK_ARG: 0
 }
 
 ArgTypeMap = {
@@ -191,7 +209,9 @@ ArgTypeMap = {
     PASTE_ARG: "",
     KEYDOWN_ARG: "",
     KEYUP_ARG: "",
-    DELAY_ARG: "time - seconds"
+    DELAY_ARG: "time - seconds",
+    SHIFT_LEFTCLICK_ARG: "",
+    SHIFT_RIGHTCLICK_ARG: ""
 }
 
 OutOfBoundsBoxes = [
