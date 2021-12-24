@@ -2,7 +2,7 @@ Oldschoolrunescape Controls
  
  
  
-#!addinput oldschoolrunescape # 0 0 0 0 0 100 0.5
+# !addinput oldschoolrunescape # 0 0 0 0 0 100 0.5
 #!addinput oldschoolrunescape home 1 0 1 0 0 100 0.5
 #!addinput oldschoolrunescape tab 2 0 1 0 0 100 0.5
 #!addinput oldschoolrunescape enter 3 0 1 0 0 100 0.5
