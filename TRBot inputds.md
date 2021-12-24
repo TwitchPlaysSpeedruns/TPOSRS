@@ -3,20 +3,20 @@ Oldschoolrunescape Controls
  
  
 # !addinput oldschoolrunescape # 0 0 0 0 0 100 0.5
-#!addinput oldschoolrunescape home 1 0 1 0 0 100 0.5
-#!addinput oldschoolrunescape tab 2 0 1 0 0 100 0.5
-#!addinput oldschoolrunescape enter 3 0 1 0 0 100 0.5
-#!addinput oldschoolrunescape shift 4 0 1 0 0 100 0.5
-#!addinput oldschoolrunescape backspace 5 0 1 0 0 100 0.5      
-!addinput oldschoolrunescape space 6 0 1 0 0 100 0.5
-!addinput oldschoolrunescape ctrl 7 0 1 0 0 100 0.5
-!addinput oldschoolrunescape esc 8 0 1 0 0 100 0.5
-!addinput oldschoolrunescape f1 9 0 1 0 0 100 0.5
-!addinput oldschoolrunescape f2 10 0 1 0 0 100 0.5
-!addinput oldschoolrunescape f3 11 0 1 0 0 100 0.5
-!addinput oldschoolrunescape f4 12 0 1 0 0 100 0.5
-!addinput oldschoolrunescape f5 13 0 1 0 0 100 0.5
-!addinput oldschoolrunescape f9 14 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape home 1 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape tab 2 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape enter 3 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape shift 4 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape backspace 5 0 1 0 0 100 0.5      
+# !addinput oldschoolrunescape space 6 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape ctrl 7 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape esc 8 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape f1 9 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape f2 10 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape f3 11 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape f4 12 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape f5 13 0 1 0 0 100 0.5
+# !addinput oldschoolrunescape f9 14 0 1 0 0 100 0.5
 !addinput oldschoolrunescape n1 15 0 1 0 0 100 0.5
 !addinput oldschoolrunescape n2 16 0 1 0 0 100 0.5
 !addinput oldschoolrunescape n3 17 0 1 0 0 100 0.5
