@@ -1,0 +1,92 @@
+#NoEnv
+SendMode Input
+SetWorkingDir %A_ScriptDir%
+ 
+; ---------------------------------------
+; This AHK Script allows you to use your
+; mouse to control TwitchPlaysOSRunescape
+; ---------------------------------------
+ 
+ 
+IniFile := A_ScriptDir . "\TwitchPlaysOSRSCalibrationFile.ini"
+ 
+if not(FileExist(IniFile)) {
+FileAppend,
+(
+[data]
+Var1 = 0.0
+Var2 = 0.0
+Var3 = 0.0
+Var4 = 0.0
+), % IniFile, utf-16
+}
+ 
+if (FileExist(IniFile)) {
+IniRead, XA, %IniFile%, data, Var1
+IniRead, XB, %IniFile%, data, Var2
+IniRead, YA, %IniFile%, data, Var3
+IniRead, YB, %IniFile%, data, Var4
+}
+ 
+out := 2.0*XA + 1
+calibrationstep := 0
+ 
+if (XA == 0) {
+MsgBox, Welcome to the Twitch Plays OSRS Mouse Control AHK Script!
+MsgBox, The script needs to be calibrated to work correctly. It also needs to be recalibrated every time you change where on your screen the stream is. To start the calibration, press F4. After calibrating, make sure you have selected the twitch chat box and then press F1 to "left click" on the screen where your mouse is pointing and F2 to "right click". Press Esc to end the script.
+}
+ 
+if (XA != 0) {
+MsgBox, Welcome to the Twitch Plays OSRS Mouse Control AHK Script! Current calibration values: %XA%, %XB%, %YA%, %YB%.
+}
+ 
+f4::
+if (calibrationstep == 0) {
+calibrationstep := 1
+MsgBox, calibration started. First press OK, then point your cursor at the coordinates (200, 200) and press F4 again.
+return
+}
+if (calibrationstep == 1) {
+MouseGetPos, CalibrationX1, CalibrationY1
+MsgBox, Next press OK, point your cursor at (400, 400) and press F4 again.
+calibrationstep = 2
+return
+}
+if (calibrationstep == 2) {
+MouseGetPos, CalibrationX2, CalibrationY2
+CalibrationVar1 := CalibrationX2 - CalibrationX1
+CalibrationVar2 := CalibrationY2 - CalibrationY1
+CalibrationVar1 := 200/CalibrationVar1
+CalibrationVar2 := 200/CalibrationVar2
+XA := CalibrationVar1
+YA := CalibrationVar2
+CalibrationVar1 := CalibrationX1*CalibrationVar1
+CalibrationVar2 := CalibrationY1*CalibrationVar2
+XB := 200 - CalibrationVar1
+YB := 200 - CalibrationVar2
+ 
+MsgBox, Calibration complete! Your calibration values are now %XA%, %XB%, %YA%, %YB%. Remember to have your twitch chat box active when clicking.
+calibrationstep = 0
+IniWrite, %XA%, %IniFile%, data, Var1
+IniWrite, %XB%, %IniFile%, data, Var2
+IniWrite, %YA%, %IniFile%, data, Var3
+IniWrite, %YB%, %IniFile%, data, Var4
+return
+}
+return
+ 
+f1::
+MouseGetPos, Xpos, Ypos
+Xpos := floor((XA*Xpos)+XB)
+Ypos := floor((YA*Ypos)+YB)
+Send, {!}m m %Xpos% %Ypos%, lc
+return
+ 
+f2::
+MouseGetPos, Xpos, Ypos
+Xpos := floor((XA*Xpos)+XB)
+Ypos := floor((YA*Ypos)+YB)
+Send, {!}m m %Xpos% %Ypos%, rc
+return
+ 
+Esc::ExitApp
