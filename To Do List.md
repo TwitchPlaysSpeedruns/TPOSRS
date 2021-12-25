@@ -1,5 +1,7 @@
 # Short term
 - **Add Alt button - No interaction with f4, tab, enter etc**
+- **Fix broken TBot commands**
+- **!m commands dont count towards rank or whitelist status**
 
 # Long term
  - **Handle all kb inputs through !m**
