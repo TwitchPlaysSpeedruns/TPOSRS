@@ -5,6 +5,14 @@ SetWorkingDir %A_ScriptDir%
 ; ---------------------------------------
 ; This AHK Script allows you to use your
 ; mouse to control TwitchPlaysOSRunescape
+;         Keys: F1, F2, F4, Esc.
+; "install" by pasting this into a .ahk
+;   file. Needs autohotkey installed.
+;
+;              changelog:
+;     added changelog, instructions
+;     re-added auto-pressing enter
+;      removed some useless code
 ; ---------------------------------------
  
  
@@ -28,12 +36,11 @@ IniRead, YA, %IniFile%, data, Var3
 IniRead, YB, %IniFile%, data, Var4
 }
  
-out := 2.0*XA + 1
 calibrationstep := 0
  
 if (XA == 0) {
 MsgBox, Welcome to the Twitch Plays OSRS Mouse Control AHK Script!
-MsgBox, The script needs to be calibrated to work correctly. It also needs to be recalibrated every time you change where on your screen the stream is. To start the calibration, press F4. After calibrating, make sure you have selected the twitch chat box and then press F1 to "left click" on the screen where your mouse is pointing and F2 to "right click". Press Esc to end the script.
+MsgBox, The script needs to be calibrated to work correctly. It also needs to be recalibrated every time you change where on your screen the stream is. To start the calibration, press F4. After calibrating, make sure you have selected the twitch chat box and then press F1 to "left click" on the screen where your mouse is pointing and F2 to "right click". Press Esc to instantly end the script.
 }
  
 if (XA != 0) {
@@ -79,14 +86,14 @@ f1::
 MouseGetPos, Xpos, Ypos
 Xpos := floor((XA*Xpos)+XB)
 Ypos := floor((YA*Ypos)+YB)
-Send, {!}m m %Xpos% %Ypos%, lc
+Send, {!}m m %Xpos% %Ypos%, lc{enter}
 return
  
 f2::
 MouseGetPos, Xpos, Ypos
 Xpos := floor((XA*Xpos)+XB)
 Ypos := floor((YA*Ypos)+YB)
-Send, {!}m m %Xpos% %Ypos%, rc
+Send, {!}m m %Xpos% %Ypos%, rc{enter}
 return
  
 Esc::ExitApp
