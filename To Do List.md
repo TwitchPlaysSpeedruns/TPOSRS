@@ -1,7 +1,7 @@
 # Fix immediatley (Matt)
 - **Password to account comprimised**
 - **Fix AHK #login script so it doesnt accept other inputs at same time**
-- **Add autenticator**
+- **Add authenticator**
 - **Plugin stuff :disable the Cooking plugin, and Mining plugin entirely and in Fishing plugin settings, uncheck https://wind.yaycat.best/xgb7P6VV** 
 
 
