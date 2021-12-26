@@ -10,6 +10,7 @@
 - **Add Alt button - No interaction with f4, tab, enter etc**
 - **Fix broken TRBot commands: !leaderboard, !inputlead etc**
 - **!m commands dont count towards rank or whitelist status**
+- **Create custom follower and subs alerts with RS theme**
 
 # Long term
  - **Handle all kb inputs through !m**
