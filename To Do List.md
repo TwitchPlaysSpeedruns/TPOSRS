@@ -25,4 +25,4 @@
 - **Plugin stuff :disable the Cooking plugin, and Mining plugin entirely and in Fishing plugin settings, uncheck https://wind.yaycat.best/xgb7P6VV** 
 
 **27/12/21**
--**Added customm RS follower and subscriber alerts** 
+-**Added custom RS follower and subscriber alerts** 
