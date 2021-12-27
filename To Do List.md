@@ -26,3 +26,4 @@
 
 **27/12/21**
 -**Added custom RS follower and subscriber alerts** 
+-**Added custom RS emotes and "subscriber only" onscreen floating emotes** 
