@@ -20,6 +20,7 @@ SHIFT_LEFTCLICK_ARG = "slc"
 SHIFT_RIGHTCLICK_ARG = "src"
 ALT_LEFT_CLICK_ARG = "alc"
 KEY_PRESS_ARG = "press"
+KEY_PRESS_ARG_2 = "p"
 
 
 INPUT_CHAIN_MAX = 3 # how many commands can be run at a time from a single line of text
@@ -197,7 +198,8 @@ FuncMap = {
     SHIFT_LEFTCLICK_ARG: shift_left_click,
     SHIFT_RIGHTCLICK_ARG: shift_right_click,
     ALT_LEFT_CLICK_ARG: alt_left_click,
-    KEY_PRESS_ARG: key_press
+    KEY_PRESS_ARG: key_press,
+    KEY_PRESS_ARG_2:key_press
 }
 
 # Map argument count to function
@@ -220,6 +222,7 @@ ArgCountMap = {
     SHIFT_RIGHTCLICK_ARG: 0,
     ALT_LEFT_CLICK_ARG: 0,
     KEY_PRESS_ARG: 1
+    KEY_PRESS_ARG_2: 1
 }
 
 ArgTypeMap = {
@@ -241,6 +244,7 @@ ArgTypeMap = {
     SHIFT_RIGHTCLICK_ARG: "",
     ALT_LEFT_CLICK_ARG: "",
     KEY_PRESS_ARG: "valid keys are: " + str(ALLOWED_KEYS)
+    KEY_PRESS_ARG_2: "valid keys are: " + str(ALLOWED_KEYS)
 }
 
 OutOfBoundsBoxes = [
