@@ -1,5 +1,5 @@
 # Fix immediatley 
-- **Nothing for now**
+- **ctrl+shift+esc opens task manager. What the absolute fuck, how did i miss this? =o - Matt to fix that shit immediately. Quick fix of restricting ctrl to lvl 30 mods done**
 
 
 
