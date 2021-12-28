@@ -18,10 +18,26 @@ KEYUP_ARG = "keyup"
 DELAY_ARG = "delay"
 SHIFT_LEFTCLICK_ARG = "slc"
 SHIFT_RIGHTCLICK_ARG = "src"
+ALT_LEFT_CLICK_ARG = "alc"
+KEY_PRESS_ARG = "press"
 
 
 INPUT_CHAIN_MAX = 3 # how many commands can be run at a time from a single line of text
 DELAY_TIME_MAX = 2 # how long you can delay before another command
+
+# All keys users are allowed to press - See https://pyautogui.readthedocs.io/en/latest/keyboard.html for list of all possibilities
+ALLOWED_KEYS = ['home', 'tab', 'enter', 'shift', 'backspace', 'space', 'ctrl', 'esc', 'f1', 'f2', 'f3', 'f4', 'f5', 'f9', 'f10', 'f11', 'up', 'down', 'left', 'right']
+
+def key_press(*args):
+    try:
+        key = str(args[0])
+        if(key in ALLOWED_KEYS):
+            pyautogui.press(str(args[0]))
+        else:
+            raise KeyError
+    except KeyError:
+                print("Invalid key press: " + key, file=sys.stderr) 
+                sys.exit(2)
 
 def key_down(*args):
     pyautogui.keyDown(str(args[0]))
@@ -71,6 +87,11 @@ def shift_right_click():
     pyautogui.click(button='right')
     pyautogui.keyUp('shift')
 
+def alt_left_click(*args):
+    pyautogui.keyDown('alt')
+    pyautogui.click()
+    pyautogui.keyUp('alt')
+
 def dragmouse(*args):
     newMouseLocation = (int(args[0]), int(args[1]))
     if(isPointOutOfBounds(newMouseLocation) is False): # if new pos isn't out of bounds move to new pos
@@ -115,6 +136,8 @@ def movemouserel(*args):
     #time.sleep(0)    
     #clampmouse()
     pass
+
+
 
 def execution_delay(*args):
     delayTime = float(args[0])
@@ -172,7 +195,9 @@ FuncMap = {
     KEYUP_ARG: key_up,
     DELAY_ARG: execution_delay,
     SHIFT_LEFTCLICK_ARG: shift_left_click,
-    SHIFT_RIGHTCLICK_ARG: shift_right_click
+    SHIFT_RIGHTCLICK_ARG: shift_right_click,
+    ALT_LEFT_CLICK_ARG: alt_left_click,
+    KEY_PRESS_ARG: key_press
 }
 
 # Map argument count to function
@@ -192,7 +217,9 @@ ArgCountMap = {
     KEYUP_ARG: 1,
     DELAY_ARG: 1,
     SHIFT_LEFTCLICK_ARG: 0,
-    SHIFT_RIGHTCLICK_ARG: 0
+    SHIFT_RIGHTCLICK_ARG: 0,
+    ALT_LEFT_CLICK_ARG: 0,
+    KEY_PRESS_ARG: 1
 }
 
 ArgTypeMap = {
@@ -211,7 +238,9 @@ ArgTypeMap = {
     KEYUP_ARG: "",
     DELAY_ARG: "time - seconds",
     SHIFT_LEFTCLICK_ARG: "",
-    SHIFT_RIGHTCLICK_ARG: ""
+    SHIFT_RIGHTCLICK_ARG: "",
+    ALT_LEFT_CLICK_ARG: "",
+    KEY_PRESS_ARG: "valid keys are: " + str(ALLOWED_KEYS)
 }
 
 OutOfBoundsBoxes = [
