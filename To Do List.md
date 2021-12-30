@@ -1,5 +1,5 @@
 # Fix immediatley 
-- **ctrl+shift+esc opens task manager. What the absolute fuck, how did i miss this? =o - Matt to fix that shit immediately. Quick fix of restricting ctrl to lvl 30 mods done**
+
 
 
 
@@ -28,3 +28,9 @@
 **27/12/21**
 - **Added custom RS follower and subscriber alerts** 
 - **Added custom RS emotes and "subscriber only" onscreen floating emotes** 
+- **ctrl+shift+esc opens task manager. What the absolute fuck, how did i miss this? =o - Matt to fix that shit immediately. Quick fix of restricting ctrl to lvl 30 mods done**
+
+**30/12/21**
+**-Updated RL client with windcat's version**
+
+
