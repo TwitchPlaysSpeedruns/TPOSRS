@@ -11,7 +11,7 @@
 
 
 # Long term
- - **is there a way to remove the need for m and p commands? e.g  "200 200,lc"**
+ - **is there a way to remove the need for m and p commands? e.g  "200 200,lc"** maybe something like - if input is "300 200" or "3digits space 3digits" parse it as a m command, if input is = to "allowed key list" parse it as a p command??
  - **Handle all kb inputs through !m**
  - **Create macro system within !m**
  - **Start thinking about Twitch Plays Rimworld**
