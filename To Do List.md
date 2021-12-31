@@ -6,7 +6,7 @@
 
 - # Short term
 - **!m commands dont count towards rank or whitelist status**
-- **Need system to hold inoputs; up1s, up500ms, up1.5s**
+- **Need system to hold inputs; up1s, up500ms, up1.5s - currently using combination of both to allow certain buttons to be held**
 - **If !m m is out of bounds the following click will still parse e.g "!m m 50 50, lc" will return out of bounds message but still click**
 
 
