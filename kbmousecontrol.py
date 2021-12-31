@@ -221,7 +221,7 @@ ArgCountMap = {
     SHIFT_LEFTCLICK_ARG: 0,
     SHIFT_RIGHTCLICK_ARG: 0,
     ALT_LEFT_CLICK_ARG: 0,
-    KEY_PRESS_ARG: 1
+    KEY_PRESS_ARG: 1,
     KEY_PRESS_ARG_2: 1
 }
 
@@ -243,7 +243,7 @@ ArgTypeMap = {
     SHIFT_LEFTCLICK_ARG: "",
     SHIFT_RIGHTCLICK_ARG: "",
     ALT_LEFT_CLICK_ARG: "",
-    KEY_PRESS_ARG: "valid keys are: " + str(ALLOWED_KEYS)
+    KEY_PRESS_ARG: "valid keys are: " + str(ALLOWED_KEYS),
     KEY_PRESS_ARG_2: "valid keys are: " + str(ALLOWED_KEYS)
 }
 
