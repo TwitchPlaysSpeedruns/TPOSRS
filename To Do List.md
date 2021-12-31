@@ -5,8 +5,6 @@
 
 
 - # Short term
-
-- **Send message when more than 3 inputs are parsed to let user know about rule of 3**
 - **!m commands dont count towards rank or whitelist status**
 
 
@@ -32,4 +30,5 @@
 **30/12/21**
 **-Updated RL client with windcat's version**
 
-
+**31/12/2021**
+- **Send message when more than 3 inputs are parsed to let user know about rule of 3**

@@ -262,6 +262,8 @@ def main():
     joined_args = " ".join(str(e) for e in input_args[1:])
     ## split into commands on ", "
     cmds = joined_args.split(", ")
+    if(len(cmds) > INPUT_CHAIN_MAX):
+        print("Input chains are limited to " + str(INPUT_CHAIN_MAX) + " commands per line. Additional commands given will be ignored.", file=sys.stderr)
     cmds = cmds[0:INPUT_CHAIN_MAX]
     ##get a list of available commands
     availableCmds = ""
