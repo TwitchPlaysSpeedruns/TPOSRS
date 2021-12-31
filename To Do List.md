@@ -11,7 +11,7 @@
 
 
 # Long term
- - **is there a way to remove the need for m and p commands? e.g  "200 200,lc" **
+ - **is there a way to remove the need for m and p commands? e.g  "200 200,lc"**
  - **Handle all kb inputs through !m**
  - **Create macro system within !m**
  - **Start thinking about Twitch Plays Rimworld**
