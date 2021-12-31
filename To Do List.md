@@ -28,10 +28,10 @@
 **27/12/21**
 - **Added custom RS emotes and "subscriber only" onscreen floating emotes** 
 - **ctrl+shift+esc opens task manager. What the absolute fuck, how did i miss this? =o - Matt to fix that shit immediately. Quick fix of restricting ctrl to lvl 30 mods done**
-- - **Fix broken TRBot commands: !leaderboard, !inputlead etc**
+- **Fix broken TRBot commands: !leaderboard, !inputlead etc**
 
 **30/12/21**
-**-Updated RL client with windcat's version**
+- **Updated RL client with windcat's version**
 
 **31/12/2021**
 - **Send message when more than 3 inputs are parsed to let user know about rule of 3**
