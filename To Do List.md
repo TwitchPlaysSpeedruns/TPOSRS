@@ -5,16 +5,18 @@
 
 
 - # Short term
-- **!m commands dont count towards rank or whitelist status**
-- **Need system to hold inputs; up1s, up500ms, up1.5s - currently using combination of both to allow certain buttons to be held**
-- **If !m m is out of bounds the following click will still parse e.g "!m m 50 50, lc" will return out of bounds message but still click**
+- **!m commands dont count towards rank or whitelist status** - TPS
+- **Move channel to dedicated host and restart TPS main channel - sorry TPS2 =(**  - TPS
+- **Overhaul overlay - add multiple styles-  add ways for chat to change overlay - community channel point goal?**  - TPS
+- **Need system to hold inputs; up1s, up500ms, up1.5s - currently using combination of both to allow certain buttons to be held** - Cpt Chucklefuck
+- **If !m m is out of bounds the following click will still parse e.g "!m m 50 50, lc" will return out of bounds message but still click** - Cpt Chucklefuck
 
 
 # Long term
  - **is there a way to remove the need for m and p commands? e.g  "200 200,lc"** maybe something like - if input is "300 200" or "3digits space 3digits" parse it as a m command, if input is = to "allowed key list" parse it as a p command??
  - **Handle all kb inputs through !m**
  - **Create macro system within !m**
- - **Start thinking about Twitch Plays Rimworld**
+ 
 
 
 # Completed 
