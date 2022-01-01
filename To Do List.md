@@ -8,7 +8,7 @@
 - **!m commands dont count towards rank or whitelist status** - TPS
 - **Move channel to dedicated host and restart TPS main channel - sorry TPS2 =(**  - TPS
 - **Overhaul overlay - add multiple styles-  add ways for chat to change overlay - community channel point goal?**  - TPS
-- **Need system to hold inputs; up1s, up500ms, up1.5s - currently using combination of both to allow certain buttons to be held** - Cpt Chucklefuck
+- **Need system to hold inputs; up1s, up500ms, up1.5s - Also needs to have a cap. Ideally this could be variable per input e.g Up is capped at 2s, Space is capped at 10s.** - Cpt Chucklefuck
 - **Can we set aliases like #inv1 for strings like "!m m 345 264, lc"?** - Cpt Chucklefuck
 - **If !m m is out of bounds the following click will still parse e.g "!m m 50 50, lc" will return out of bounds message but still click** - Cpt Chucklefuck
 
