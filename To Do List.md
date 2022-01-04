@@ -42,5 +42,5 @@
 **31/12/2021**
 - **Send message when more than 3 inputs are parsed to let user know about rule of 3**
 
-**04/01/2022
+**04/01/2022**
 - **Out of bounds clicks will now error and exit the script without running further command in a given chain i.e. lc, m 5 5, lc will now perform a left click then provide an error message, the 3rd command is not performed**
