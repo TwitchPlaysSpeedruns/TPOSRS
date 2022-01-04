@@ -10,8 +10,6 @@
 - **Overhaul overlay - add multiple styles-  add ways for chat to change overlay - community channel point goal?**  - TPS
 - **Need system to hold inputs; up1s, up500ms, up1.5s - Also needs to have a cap. Ideally this could be variable per input e.g Up is capped at 2s, Space is capped at 10s.** - Cpt Chucklefuck
 - **Can we set aliases like #inv1 for strings like "!m m 345 264, lc"?** - Cpt Chucklefuck
-- **If !m m is out of bounds the following click will still parse e.g "!m m 50 50, lc" will return out of bounds message but still click** - Cpt Chucklefuck
-
 
 # Long term
  - **is there a way to remove the need for m and p commands? e.g  "200 200,lc"** maybe something like - if input is "300 200" or "3digits space 3digits" parse it as a m command, if input is = to "allowed key list" parse it as a p command??
@@ -43,3 +41,6 @@
 
 **31/12/2021**
 - **Send message when more than 3 inputs are parsed to let user know about rule of 3**
+
+**04/01/2022
+- **Out of bounds clicks will now error and exit the script without running further command in a given chain i.e. lc, m 5 5, lc will now perform a left click then provide an error message, the 3rd command is not performed**
