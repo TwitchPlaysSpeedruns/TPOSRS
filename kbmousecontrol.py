@@ -120,7 +120,7 @@ def dragmouserel(*args):
 def movemouse(*args):
     newMouseLocation = (int(args[0]), int(args[1]))
     if(isPointOutOfBounds(newMouseLocation) is False): # if new pos isn't out of bounds move to new pos
-        pyautogui.moveTo(newMouseLocation[0], newMouseLocation[1])
+        pyautogui.moveTo(newMouseLocation[0], newMouseLocation[1], 2, pyautogui.easeOutQuad)
     else:
         print("Cannot move mouse to position (" + str(newMouseLocation[0]) + ", " + str(newMouseLocation[1]) + ") - Out of bounds", file=sys.stderr)
         sys.exit(1)
@@ -133,7 +133,7 @@ def movemouserel(*args):
     currentMousePos = pyautogui.position()
     newMouseLocation = (int(args[0]) + currentMousePos[0], int(args[1]) + currentMousePos[1])
     if(isPointOutOfBounds(newMouseLocation) is False):
-        pyautogui.moveTo(newMouseLocation[0], newMouseLocation[1])
+        pyautogui.moveTo(newMouseLocation[0], newMouseLocation[1], 2, pyautogui.easeOutQuad)
     else:
         print("Cannot move mouse to position (" + str(newMouseLocation[0]) + ", " + str(newMouseLocation[1]) + ") - Out of bounds", file=sys.stderr)
         sys.exit(1)
